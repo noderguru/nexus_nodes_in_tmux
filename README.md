@@ -33,6 +33,10 @@ for s in $(tmux list-sessions -F '#S' | grep '^nexus_node_'); do
   '"
 done
 ```
+### удалить все сессии с именем "nexus_node_"
+```bash
+tmux ls | grep "^nexus_node_" | cut -d: -f1 | xargs -r -n1 tmux kill-session -t
+```
 ### потребление RAM и CPU каждой ноды внутри сессии
 ```bash
 ps -C nexus-network -o pid,%cpu,%mem,cmd --sort=-%cpu
