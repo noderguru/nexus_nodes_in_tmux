@@ -39,7 +39,7 @@ tmux ls | grep "^nexus_node_" | cut -d: -f1 | xargs -r -n1 tmux kill-session -t
 ```
 ### потребление RAM и CPU каждой ноды внутри сессии
 ```bash
-ps -C nexus-network -o pid,%cpu,%mem,cmd --sort=-%cpu
+ps aux | grep nexus-network | grep -v grep | awk '{ printf "PID: %s | CPU: %s%% | RAM: %.2f GB | CMD: ", $2, $3, $6/1024/1024; for(i=11;i<=NF;++i) printf "%s ", $i; print "" }'
 ```
 
 
