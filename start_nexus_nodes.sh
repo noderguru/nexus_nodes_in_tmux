@@ -41,12 +41,10 @@ for NODE_ID in $IDS; do
     CMD="$NEXUS_BIN start --node-id $NODE_ID"
 
 tmux new-session -d -s "$SESSION_NAME" "bash -c '
-while true; do
-  echo \"[INFO] Starting: $CMD\"
-  $CMD
-  echo \"[WARN] Process exited. Restarting in 5s...\"
-  sleep 5
-done
+echo \"[INFO] Running: $CMD\"
+$CMD
+echo \"[WARN] Process exited.\"
+exec bash
 '"
 
     echo "? Waiting $DELAY_SECONDS seconds before next..."
