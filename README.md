@@ -5,7 +5,7 @@ git clone https://github.com/noderguru/start_nexus_nodes_in_tmux.git && cd start
 ```bash
 tmux ls | grep nexus_node_ | cut -d: -f1 | xargs -r -n1 tmux kill-session -t && \
 rm -f /usr/local/bin/nexus-network && \
-curl -L https://github.com/nexus-xyz/nexus-cli/releases/download/v0.9.0/nexus-network-linux-x86_64 -o /usr/local/bin/nexus-network && \
+curl -L https://github.com/nexus-xyz/nexus-cli/releases/download/v0.9.2/nexus-network-linux-x86_64 -o /usr/local/bin/nexus-network && \
 chmod +x /usr/local/bin/nexus-network && \
 cd /root/start_nexus_nodes_in_tmux && ./start_nexus_nodes.sh
 ```
