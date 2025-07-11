@@ -1,5 +1,5 @@
 ```bash
-git clone https://github.com/noderguru/nexus_nodes_in_tmux.git && cd nexus_nodes_in_tmux && chmod +x nexus_nodes.sh && nano nodes_cli.txt && ./start_nexus_nodes.sh
+git clone https://github.com/noderguru/nexus_nodes_in_tmux.git && cd nexus_nodes_in_tmux && chmod +x start_nexus_nodes.sh && nano nodes_cli.txt && ./start_nexus_nodes.sh
 ```
 ### обнова руками v0.9.6
 ```bash
