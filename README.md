@@ -22,11 +22,10 @@ for s in $(tmux list-sessions -F '#S' | grep '^nexus_node_'); do
   NODE_ID="${s#nexus_node_}"
   echo "[INFO] Restarting session: $s (ID: $NODE_ID)"
   tmux kill-session -t "$s"
-  sleep 5
+  sleep 2
   tmux new-session -d -s "$s" "bash -c '
     echo \"[INFO] Running node-id $NODE_ID\"
     nexus-network start --node-id $NODE_ID
-    echo \"[WARN] Process exited.\"
   '"
 done
 ```
