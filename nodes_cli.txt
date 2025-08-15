@@ -1,1 +1,1 @@
-вставьте id через пробел или каждый с новой строки
+Insert the ID through a space or each from a new line then    Ctrl+O > Enter > Ctrl+X
