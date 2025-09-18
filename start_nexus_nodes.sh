@@ -5,7 +5,7 @@ NODE_FILE="nodes_cli.txt"
 NEXUS_BIN="/usr/local/bin/nexus-network"
 TMUX_PREFIX="nexus_node_"
 DELAY_SECONDS=10
-NEXUS_URL="https://github.com/nexus-xyz/nexus-cli/releases/download/v0.10.11/nexus-network-linux-x86_64"
+NEXUS_URL="https://github.com/nexus-xyz/nexus-cli/releases/download/v0.10.13/nexus-network-linux-x86_64"
 
 # === Step 1: Setup ===
 
