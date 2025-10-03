@@ -1,11 +1,11 @@
 ```bash
 git clone https://github.com/noderguru/nexus_nodes_in_tmux.git && cd nexus_nodes_in_tmux && chmod +x start_nexus_nodes.sh && nano nodes_cli.txt && ./start_nexus_nodes.sh
 ```
-### обнова v0.10.16
+### обнова v0.10.17
 ```bash
 tmux ls | grep nexus_node_ | cut -d: -f1 | xargs -r -n1 tmux kill-session -t && \
 rm -f /usr/local/bin/nexus-network && \
-curl -L https://github.com/nexus-xyz/nexus-cli/releases/download/v0.10.16/nexus-network-linux-x86_64 -o /usr/local/bin/nexus-network && \
+curl -L https://github.com/nexus-xyz/nexus-cli/releases/download/v0.10.17/nexus-network-linux-x86_64 -o /usr/local/bin/nexus-network && \
 chmod +x /usr/local/bin/nexus-network && \
 cd /root/nexus_nodes_in_tmux && ./start_nexus_nodes.sh
 ```
